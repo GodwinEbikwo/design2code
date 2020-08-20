@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+nav {
+  background: #161616;
+  padding: 0 0.9375rem;
+}
+
+a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.menu,
+.submenu {
+  list-style-type: none;
+}
+
+.logo {
+  font-size: 1.25rem;
+  padding: 0.46875rem 1.125rem 0.46875rem 0;
+}
+
+.item {
+  padding: 0.625rem;
+}
+
+.item.button {
+  padding: 0.5625rem 0.3125rem;
+}
+
+.item:not(.button) a:hover,
+.item a:hover::after {
+  color: #fff;
+}
+
+/* ----------mobile---------------- */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li a {
+  display: block;
+  padding: 0.9375rem 0.3125rem;
+}
+
+.menu li.subitem a {
+  padding: 0.9375rem;
+}
+
+.toggle {
+  order: 1;
+  font-size: 1.25rem;
+}
+
+.item.button {
+  order: 2;
+}
+
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.active .item {
+  display: block;
+}
+
+.button.secondary {
+  border-bottom: 1px #444 solid;
+}
+
+/* -------sub-menu--------- */
+.submenu {
+  display: none;
+}
+
+.submenu-active .submenu {
+  display: block;
+}
+
+.has-submenu > a::after {
+  font-family: "Font Awesome 5 free";
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 900;
+  content: "\f078";
+  color: white;
+  padding-left: 0.3125rem;
+}
+
+.submenu a {
+  padding: 0.625rem 0.9375rem;
+}
+
+.submenu-active {
+  background-color: #2c2c2e;
+  border-radius: 0.1875rem;
+}
